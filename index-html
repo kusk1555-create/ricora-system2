@@ -1,1 +1,45 @@
+<div class="roadmap-box" style="background-color: #ffffff; padding: 30px 20px; border-radius: 12px; margin: 40px 0; border: 2px dashed #00b894;">
+    <h2 style="color: #00b894; margin-top: 0;">🔰 迷ったらコレ！超安心ロードマップ</h2>
+    <p style="font-size: 14px; color: #636e72;">「何からやればいいの…？」という方は、騙されたと思ってこの通りに進めてみてください。</p>
 
+    <div class="step-container">
+        <div class="step active" id="step1" onclick="showNextStep(2)">
+            <div class="step-num">Step 1</div>
+            <div class="step-text">
+                <strong>スマホに無料アプリを入れる📱</strong><br>
+                iPhoneなら「GarageBand」、Androidなら「BandLab」をダウンロードするだけ！今日はこれだけで100点満点です。（タップして次へ）
+            </div>
+        </div>
+
+        <div class="step hidden" id="step2" onclick="showNextStep(3)">
+            <div class="step-num">Step 2</div>
+            <div class="step-text">
+                <strong>ループ素材を並べてみる🧩</strong><br>
+                アプリの中にある「ドラム」や「ピアノ」の短いフレーズ（ループ素材）を、パズルのように2〜3個並べて同時再生してみましょう。もう曲っぽくなります！（タップして次へ）
+            </div>
+        </div>
+
+        <div class="step hidden" id="step3">
+            <div class="step-num" style="background-color: #d63031;">Step 3</div>
+            <div class="step-text">
+                <strong>サークルに「できた！」と持ってくる🏃‍♂️</strong><br>
+                数秒の音源で構いません。サークルの見学やDMに持ってきてください。<b>先輩たちが泣きながらスタンディングオベーションで褒めちぎります。</b>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // タップで次のステップを表示する簡単なプログラム
+    function showNextStep(stepNumber) {
+        const nextStep = document.getElementById('step' + stepNumber);
+        if (nextStep) {
+            nextStep.style.display = 'flex'; // 隠していたものを表示
+            // 少しフワッと出すアニメーション（簡単のためsetTimeout使用）
+            setTimeout(() => {
+                nextStep.style.opacity = '1';
+                nextStep.style.transform = 'translateY(0)';
+            }, 10);
+        }
+    }
+</script>
