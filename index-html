@@ -1,45 +1,223 @@
-<div class="roadmap-box" style="background-color: #ffffff; padding: 30px 20px; border-radius: 12px; margin: 40px 0; border: 2px dashed #00b894;">
-    <h2 style="color: #00b894; margin-top: 0;">🔰 迷ったらコレ！超安心ロードマップ</h2>
-    <p style="font-size: 14px; color: #636e72;">「何からやればいいの…？」という方は、騙されたと思ってこの通りに進めてみてください。</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【SOS】DTMサークルからのお願い</title>
+    <style>
+        /* 全体の設定 */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffeaa7; /* 親しみやすい温かみのある背景色 */
+            color: #2d3436;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        
+        /* トップのSOSメッセージ部分 */
+        .sos-badge {
+            display: inline-block;
+            background-color: #d63031;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        h1 { font-size: 28px; margin-top: 0; color: #d63031; }
+        .message { font-size: 16px; line-height: 1.8; text-align: left; margin-bottom: 30px; }
+        .highlight { font-weight: bold; color: #0984e3; background: linear-gradient(transparent 70%, #74b9ff 70%); }
+        
+        /* 遊べるシンセサイザー部分 */
+        .synth-box {
+            background-color: #f1f2f6;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        .synth-box p { margin-top: 0; font-weight: bold; color: #2d3436; }
+        .keys { display: flex; justify-content: center; gap: 10px; }
+        .key-btn {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            border: none;
+            font-size: 18px; font-weight: bold;
+            color: white; cursor: pointer;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+        .key-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+        .c { background-color: #e17055; }
+        .d { background-color: #fdcb6e; }
+        .e { background-color: #00b894; }
+        .f { background-color: #0984e3; }
+        
+        /* 安心のロードマップ部分 */
+        .roadmap-box {
+            background-color: #ffffff;
+            padding: 30px 20px;
+            border-radius: 12px;
+            margin: 40px 0;
+            border: 2px dashed #00b894;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            background-color: #f8f9fa;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 5px solid #00b894;
+        }
+        .step:hover { background-color: #e2f0ed; }
+        .step-num {
+            background-color: #00b894;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 50%;
+            min-width: 45px;
+            text-align: center;
+            font-size: 12px;
+            margin-right: 15px;
+        }
+        .step-text { text-align: left; font-size: 15px; line-height: 1.5; }
+        .hidden {
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        /* 連絡先ボタン */
+        .join-btn {
+            display: inline-block;
+            background-color: #00b894;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 184, 148, 0.3);
+        }
+        .join-btn:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
 
-    <div class="step-container">
-        <div class="step active" id="step1" onclick="showNextStep(2)">
-            <div class="step-num">Step 1</div>
-            <div class="step-text">
-                <strong>スマホに無料アプリを入れる📱</strong><br>
-                iPhoneなら「GarageBand」、Androidなら「BandLab」をダウンロードするだけ！今日はこれだけで100点満点です。（タップして次へ）
-            </div>
+<div class="container">
+    <div class="sos-badge">緊急事態🚨</div>
+    <h1>DTMサークル、<br>マジで廃部の危機です！</h1>
+    
+    <div class="message">
+        <p>はじめまして！DTM（パソコンで音楽を作る）サークルです。</p>
+        <p>単刀直入に言います。<strong>このままだと人数不足でサークルが消滅します…！</strong></p>
+        <p>「音楽の知識がない」「楽器が弾けない」「Macを持っていない」<br>
+        <span class="highlight">全部まったく問題ありません！</span> スマホの無料アプリからでも始められます。優しい先輩（※絶滅危惧種）がゼロから教えます。</p>
+    </div>
+
+    <div class="synth-box">
+        <p>👇試しに押してみて！これがDTMの第一歩です</p>
+        <div class="keys">
+            <button class="key-btn c" onmousedown="playSound(261.63)">ド</button>
+            <button class="key-btn d" onmousedown="playSound(293.66)">レ</button>
+            <button class="key-btn e" onmousedown="playSound(329.63)">ミ</button>
+            <button class="key-btn f" onmousedown="playSound(349.23)">ファ</button>
         </div>
+    </div>
 
-        <div class="step hidden" id="step2" onclick="showNextStep(3)">
-            <div class="step-num">Step 2</div>
-            <div class="step-text">
-                <strong>ループ素材を並べてみる🧩</strong><br>
-                アプリの中にある「ドラム」や「ピアノ」の短いフレーズ（ループ素材）を、パズルのように2〜3個並べて同時再生してみましょう。もう曲っぽくなります！（タップして次へ）
+    <div class="roadmap-box">
+        <h2 style="color: #00b894; margin-top: 0; font-size: 20px;">🔰 迷ったらコレ！超安心ロードマップ</h2>
+        <p style="font-size: 14px; color: #636e72; margin-bottom: 20px;">「何からやればいいの…？」という方は、騙されたと思ってこの通りに進めてみてください。</p>
+
+        <div class="step-container">
+            <div class="step active" id="step1" onclick="showNextStep(2)">
+                <div class="step-num">Step 1</div>
+                <div class="step-text">
+                    <strong>スマホに無料アプリを入れる📱</strong><br>
+                    iPhoneなら「GarageBand」、Androidなら「BandLab」をダウンロードするだけ！今日はこれだけで100点満点です。<br><span style="font-size: 12px; color: #888;">（タップして次へ）</span>
+                </div>
             </div>
-        </div>
 
-        <div class="step hidden" id="step3">
-            <div class="step-num" style="background-color: #d63031;">Step 3</div>
-            <div class="step-text">
-                <strong>サークルに「できた！」と持ってくる🏃‍♂️</strong><br>
-                数秒の音源で構いません。サークルの見学やDMに持ってきてください。<b>先輩たちが泣きながらスタンディングオベーションで褒めちぎります。</b>
+            <div class="step hidden" id="step2" onclick="showNextStep(3)">
+                <div class="step-num">Step 2</div>
+                <div class="step-text">
+                    <strong>ループ素材を並べてみる🧩</strong><br>
+                    アプリの中にある「ドラム」や「ピアノ」の短いフレーズを、パズルのように2〜3個並べて同時再生してみましょう。もう曲っぽくなります！<br><span style="font-size: 12px; color: #888;">（タップして次へ）</span>
+                </div>
+            </div>
+
+            <div class="step hidden" id="step3">
+                <div class="step-num" style="background-color: #d63031;">Step 3</div>
+                <div class="step-text">
+                    <strong>サークルに「できた！」と持ってくる🏃‍♂️</strong><br>
+                    数秒の音源で構いません。サークルの見学やDMに持ってきてください。<b>先輩たちが泣きながらスタンディングオベーションで褒めちぎります。</b>
+                </div>
             </div>
         </div>
     </div>
+
+    <p style="font-size: 14px; color: #636e72; margin-bottom: 20px;">少しでも「面白そうかも」と思ったら、まずは見学・相談だけでも！<br>あなたが入部してくれたら、先輩たちは泣いて喜びます。</p>
+
+    <a href="#" class="join-btn">✉️ サークルに連絡してみる（X / LINE）</a>
 </div>
 
 <script>
-    // タップで次のステップを表示する簡単なプログラム
+    // --- Web Audio APIを使った簡易シンセサイザー ---
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    let audioCtx;
+
+    function playSound(frequency) {
+        if (!audioCtx) { audioCtx = new AudioContext(); }
+        
+        const oscillator = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+        
+        oscillator.type = 'sine'; // 丸っこい可愛い音
+        oscillator.frequency.value = frequency;
+        
+        gainNode.gain.setValueAtTime(1, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + 0.5);
+    }
+
+    // --- ロードマップの表示切り替えアニメーション ---
     function showNextStep(stepNumber) {
         const nextStep = document.getElementById('step' + stepNumber);
-        if (nextStep) {
-            nextStep.style.display = 'flex'; // 隠していたものを表示
-            // 少しフワッと出すアニメーション（簡単のためsetTimeout使用）
+        if (nextStep && nextStep.classList.contains('hidden')) {
+            nextStep.style.display = 'flex';
+            // ブラウザの描画タイミングをずらしてアニメーションを適用
             setTimeout(() => {
+                nextStep.classList.remove('hidden');
                 nextStep.style.opacity = '1';
                 nextStep.style.transform = 'translateY(0)';
-            }, 10);
+            }, 50);
         }
     }
 </script>
+
+</body>
+</html>
